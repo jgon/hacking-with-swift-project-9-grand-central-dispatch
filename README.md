@@ -1,4 +1,4 @@
-# Hacking with Swift - Project 7 - Whitehouse Petitions: JSON and NSData
+# Hacking with Swift - Project 9 - Grand Central Dispatch
 
 # Setup
 - XCode 7.2.1

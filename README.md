@@ -1,5 +1,7 @@
 # Hacking with Swift - Project 9 - Grand Central Dispatch
 
+Learning how to run complex tasks in the background with GCD.
+
 # Setup
 - XCode 7.2.1
 - Swift 2.0
@@ -8,12 +10,8 @@
 
 ## Topics covered
 
-- Adding a ```UITabBarController``` to a project using the Master Detail template.
-Selecting the Master Navigation controller and from Xcode menu ```Editor -> Embed In -> Tab Bar Controller```.
-The Master navigation controller storyboard id is set to ```NavController``` in order to later be able to programmatically create another instance.
-- Downloading JSON data using ```NSURL(string: urlString)``` and ```NSData(contentsOfURL: url, options: [])```.
-- Parsing JSON data using [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON).
-- Modifying the project info.plist to allow insecure HTTP loads. Although after verification it does work without in this example.
-- Replacing the default detail view with Web view (```WKWebView```) to render HTML (```WKwebView.loadHTMLString```)
-- Creating a second master navigation controller with master view programmatically using ```UIStoryboard.storyboard.instantiateViewControllerWithIdentifier``` and adding in to a ```UITabBarController``` (```tabBarController.viewControllers?.append```).
-- Using ```tag``` to differentiate view controllers.
+- Using ```dispatch_async()``` to run things in the background and bringing
+results to the main thread.
+- QoS of the different type of queues (```User Interactive```, ```User Initiated```,
+  ```Utility queue```, ```Background queue```). The different types of queues have an impact on the battery life.
+- ```dispatch_async()``` requires code to by passed as a closure and ```[unowned self]``` must be used to prevent reference cycles (memory leaks).

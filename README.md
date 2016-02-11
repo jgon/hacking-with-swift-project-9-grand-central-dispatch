@@ -1,6 +1,6 @@
 # Hacking with Swift - Project 9 - Grand Central Dispatch
 
-Learning how to run complex tasks in the background with GCD.
+Running complex tasks in the background with GCD.
 
 # Setup
 - XCode 7.2.1
